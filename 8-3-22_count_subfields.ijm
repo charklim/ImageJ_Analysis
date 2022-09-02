@@ -1,20 +1,9 @@
 //macro to count cells within a given subfield
 //by Charlotte Klimovich - 8-30-22
+//at this point you should already have generated the subfields 
 
-//at this point you should already have generated the subfields 
-//MUST have the subfield of interest selected
 
-// Fills an array with the corresponding X & Y values of each point by successive concatenation
-
-x = newArray();
-y = newArray();
-getVoxelSize(vx,vy,vz,unit);
-for (i=0; i < nResults; i++) {	
-	x = Array.concat(x, getResult("X", i)  / vx );
-	y = Array.concat(y, getResult("Y", i)  / vx );
-}
-
-// Computes the number of points that reside within the lesion area that contains MOG labeling
+// Computes the number of points that reside within the subfield that contains MOG labeling
 roiManager("Select", 3)
 for (i=0; i < nResults; i++) {
 	x_coord = (x[i]);
@@ -27,14 +16,59 @@ for (i=0; i < nResults; i++) {
 		counter_lesionMyelinated = counter_lesionMyelinated + 1;
 	}
 }
+
+
+/* 
+ * Returns index of first ROI that matches  
+ * the given regular expression 
+ */ 
 function findRoiWithName(roiName) { 
-	nR = roiManager("Count"); for (i=0; i<nR; i++) {
-		roiManager("Select", i); rName = Roi.getName(); if (matches(rName, roiName)) {
-			return i; } } return -1; 
-			}
-	
+	nR = roiManager("Count"); 
+ 
+	for (i=0; i<nR; i++) { 
+		roiManager("Select", i); 
+		rName = Roi.getName(); 
+		if (matches(rName, roiName)) { 
+			return i; 
+		} 
+	} 
+	return -1; 
+} 
+ 
+/* 
+ * Returns an array of indexes of ROIs that match  
+ * the given regular expression 
+ */ 
+function findRoisWithName(roiName) { 
+	nR = roiManager("Count"); 
+	roiIdx = newArray(nR); 
+	k=0; 
+	clippedIdx = newArray(0); 
+	 
+	for (i=0; i<nR; i++) { 
+		roiManager("Select", i); 
+		rName = Roi.getName(); 
+		if (matches(rName, roiName) ) { 
+			roiIdx[k] = i; 
+			k++; 
+		} 
+	} 
+	if (k>0) { 
+		clippedIdx = Array.trim(roiIdx,k); 
+	} 
+	 
+	return clippedIdx; 
+} 
+
+
+//testing ROI manager functions
+// Fills an array with the corresponding X & Y values of each point by successive concatenation
+
+x = newArray();
+y = newArray();
+getVoxelSize(vx,vy,vz,unit);
+for (i=0; i < nResults; i++) {	
+	x = Array.concat(x, getResult("X", i)  / vx );
+	y = Array.concat(y, getResult("Y", i)  / vx );
 }
-// Compute results
-print("Total number in lesion: " + counter_lesionTotal);
-print("Total number in lesion, myelinated: " + counter_lesionMyelinated);
-print("Total number in lesion, demyelinated: " + counter_lesionDemyelinated);
+
