@@ -4,6 +4,12 @@
 *---------------------------------------------------------------------------------*/
 
 // prepare results table from Cell Counter ouput
+waitForUser( "Select the table you want to import\nFrom the Window drop down menu\nThen click OK" );
+filepath=getDirectory( "temp" )+"savedtable"+".xls";
+saveAs( "Results", filepath);
+open(filepath);
+updateResults();
+
 // subfield names
 	submeD = "medD";
 	submiD = "midD";
