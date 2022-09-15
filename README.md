@@ -21,7 +21,12 @@
 		1. Changes size, color, & symbol of points based on type
 		2. Add points to ROI manager with appropriate labels
 		3. Also includes code for making points extra small (for comparison)
-		
+
+#### 9_1_22_FINAL_subfield_counts
+		1. Requires subfields to be generated and the section to be counted. 
+		2. Counts the number of points within each given subfield.
+
+
 #### dread outlines june 11
 		Sets line width and color of ROI landmarks in DREADD photos.
 
