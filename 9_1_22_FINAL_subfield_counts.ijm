@@ -45,6 +45,9 @@ function findRoiWithName(roiName) {	// function to select a subfield by name
 	array5 = newArray(6);
 	array6 = newArray(6);
 	array7 = newArray(6);    
+	array8 = newArray(6);
+	array9 = newArray(6);    
+	array10 = newArray(6);    		    
 	type1 = 0;
 	type2 = 0;
 	type3 = 0;
@@ -52,6 +55,9 @@ function findRoiWithName(roiName) {	// function to select a subfield by name
 	type5 = 0;
 	type6 = 0;
 	type7 = 0;
+	type8 = 0;
+	type9 = 0;
+	type10 = 0;
 
 n = getValue("results.count"); // how many points in the results table?
 
@@ -72,6 +78,9 @@ for (z=0;z < 6;z++) { //iterates through subfields
 			else if (T==5) { type5 = type5 + 1; } 
 			else if (T==6) { type6 = type6 + 1; } 
 			else if (T==7) { type7 = type7 + 1; }
+			else if (T==8) { type8 = type8 + 1; }
+			else if (T==9) { type9 = type9 + 1; }
+			else if (T==10) { type10 = type10 + 1; }
 		}
 	} // iterates through points
 	array1[z]=type1;
@@ -81,6 +90,9 @@ for (z=0;z < 6;z++) { //iterates through subfields
 	array5[z]=type5;
 	array6[z]=type6;
 	array7[z]=type7;
+	array8[z]=type8;
+	array9[z]=type9;
+	array10[z]=type10;			
 
 	type1 = 0;
 	type2 = 0;
@@ -89,9 +101,12 @@ for (z=0;z < 6;z++) { //iterates through subfields
 	type5 = 0;
 	type6 = 0;
 	type7 = 0;
+	type8 = 0;
+	type9 = 0;
+	type10 = 0;			
 } // iterates through subfields
 
-Array.show(subnames,array1,array2,array3,array4,array5,array6,array7);
+Array.show(subnames,array1,array2,array3,array4,array5,array6,array7,array8,array9,array10);
 
 
 /*
