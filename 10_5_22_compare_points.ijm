@@ -1,9 +1,11 @@
 //macro to compare two sets of points
 //in this case EG vs. KS
+//this just uses the 1st 3 symbols 
 //______________Charlotte Klimovich 10-5-22______________
 
 
-//open EG's file & read in points 
+//open EG's file & read in points (use import)
+//then run the following
 numberOfPoints = getValue("results.count");
 for (i = 0; i < numberOfPoints; i++) {
 		T = getResult("Type", i);
@@ -36,7 +38,7 @@ for (i = 0; i < numberOfPoints; i++) {
 	}
 	roiManager("UseNames", "true");
 }
-//save points to folder 
+//SELECT ALL to save points to folder from the ROI manager
 
 
 
@@ -73,4 +75,5 @@ for (i = 0; i < numberOfPoints; i++) {
 	}
 	roiManager("UseNames", "true");
 }
-//save points to folder 
+//SELECT ALL TO Save points to folder 
+//THEN YOU CAN BRING THEM BOTH INTO THE ROI MANAGER BY OPENING BOTH
