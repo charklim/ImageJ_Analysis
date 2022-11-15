@@ -31,12 +31,12 @@ numberOfPoints = getValue("results.count");
 
 for (i = 0; i < numberOfPoints; i++) {
 	T = getResult("Type", i);
-		if (T == point_type) {
-		x_array = Array.concat(x_array, X);
-		y_array = Array.concat(y_array, Y); }
 	X = getResult("X", i);
 	Y = getResult("Y", i);
-	
+		if (T == point_type) {
+	x_array = Array.concat(x_array, X);
+	y_array = Array.concat(y_array, Y); }
+
 	if (T==1){
 		makePoint(X, Y,"small black cross");
 		roiManager("Add");
