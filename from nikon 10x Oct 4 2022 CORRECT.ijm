@@ -1,7 +1,10 @@
+//for 10X photos with panda where channels turn into a stack
+//this is for dapi gfp rfp far red dkf
+//the get string is currently inoperative but it doesn't interfere
 curdir = getInfo("image.directory");
 ititle = getInfo("image.title");
-char = getString("characters til space","x");
-print (char);
+//char = getString("characters til space","x");
+//print (char);
 print (curdir);
 print (ititle);
 run("Set Scale...", "distance=1 known=.65 unit=um");
@@ -10,7 +13,7 @@ run("Stack to Images");
 //run("Channels Tool...");
 //need to replace the filename for each channel until i figure out how to make a wildcard 
 //default name uses the characters UNTIL there is a space
-run("Merge Channels...", "c1=SGF-5-0001 c2=SGF-5-0002 c3=SGF-5-0003 c4=SGF-5-0004 c5=SGF-5-0005 create");
+run("Merge Channels...", "c1=B6-ISH-6-0001 c2=B6-ISH-6-0002 c3=B6-ISH-6-0003 c4=B6-ISH-6-0004 c5=B6-ISH-6-0005 create");
 selectWindow("Composite");
 //run("In [+]");
 run("In [+]");
