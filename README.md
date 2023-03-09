@@ -2,6 +2,12 @@
 
 <h1 align="center">Index of ImageJ macros saved to this repository</h1>
 		
+#### 3-7-23_random_sampling_in_subfield
+		1. Requires region of interest and counts
+		2. Asks user to choose region of interest 
+		3. Asks user to choose cell types of interest
+		4. Randomly picks from cells in region & labels them
+
 #### 3-1-22_generate_subfields_from_NST_outline
 		1. Generates bounding rectangle around NTS & divides into 6
 		2. After user places subfields, sets name & color of each
