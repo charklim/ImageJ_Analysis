@@ -138,16 +138,16 @@ setFont("SanSerif", labelFontSize, "bold antialiased");
 color = newArray("green","red","magenta","white","white","white","yellow","yellow","yellow","cyan");
 symbol = newArray("1","2","3","4","5","6","7","8","9","10");
 
-sample_size1 = 5;
-sample_size2 = 3;
-sample_size3 = 3;
-sample_size4 = 3;
-sample_size5 = 2;
-sample_size6 = 2;
-sample_size7 = 2;
-sample_size8 = 2;
-sample_size9 = 3;
-sample_size10 = 3;
+sample_size1 = type1*0.60;
+sample_size2 = type2*0.60;
+sample_size3 = type3*0.60;
+sample_size4 = type4*0.60;
+sample_size5 = type5*0.60;
+sample_size6 = type6*0.60;
+sample_size7 = type7*0.60;
+sample_size8 = type8*0.60;
+sample_size9 = type9*0.60;
+sample_size10 = type10*0.60;
 
 // checkbox
 rows = 10;
