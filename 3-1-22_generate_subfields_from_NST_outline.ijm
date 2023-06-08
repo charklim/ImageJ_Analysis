@@ -39,6 +39,7 @@ roiManager("Add");
 roiManager("Add");
 
 //PLACE SUBFIELDS MANUALLY
+//make sure to check that "show all" and "labels" are selected on the ROI manager 
 //pick from top of stack of squares (BOTTOM OF LIST) 
 //and place in order medV midV latV medD midD latD (roi#=9,8,7,6,5,4)
 
